@@ -1,0 +1,32 @@
+<section class="section-segmentos">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-offset-1 col-md-10">
+        <h2>Mundo</h2>
+        <div class="row">
+          <div class="col-xs-12 col-md-3" ng-repeat="main in dataMundo.data">
+            <div class="cnt-news">
+              <div class="cnt-imagem">
+                <a href="{{main.url}}"><img src="assets/media/{{main.image}}" /></a>
+              </div>
+              <div class="cnt-texto">
+                <a href="javascript:void(0);">
+                  <h2>{{main.label}}</h2>
+                  <h3>{{main.title}}</h3>
+                  <p>{{main.description}}</p>
+                </a>
+              </div>
+              <div class="cnt-share">
+                <a href="{{main.url}}" title="Compartilhar"><img src="assets/media/ico-share-black.png" /></a>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <div class="col-xs-12 col-md-12 cnt-lnk-mais">
+            <a href="javascript:void(0);" class="lnk-mais">mundo +</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

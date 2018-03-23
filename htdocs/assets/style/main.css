@@ -7,23 +7,27 @@ header {
   display: block;
   width: 100%;
   overflow: hidden;
-  min-height: 100px;
-  background: #004861; }
+  height: 100px;
+  background: #004861;
+  position: fixed;
+  top: 0;
+  z-index: 2; }
   header .cnt-menu {
-    min-height: 100px;
+    height: 100px;
     display: -webkit-flex;
     display: flex;
     -webkit-align-items: center;
     align-items: center;
     -webkit-justify-content: center;
     justify-content: center; }
-    header .cnt-menu a.lnk-menu {
+    header .cnt-menu .lnk-menu {
       display: block;
       overflow: hidden;
       position: relative;
       width: 24px;
-      height: 50px; }
-      header .cnt-menu a.lnk-menu span.bar1 {
+      height: 50px;
+      cursor: pointer; }
+      header .cnt-menu .lnk-menu span.bar1 {
         display: block;
         position: absolute;
         top: 10px;
@@ -35,7 +39,7 @@ header {
         -ms-transition: all 0.2s ease;
         -o-transition: all 0.2s ease;
         transition: all 0.2s ease; }
-      header .cnt-menu a.lnk-menu span.bar2 {
+      header .cnt-menu .lnk-menu span.bar2 {
         display: block;
         position: absolute;
         top: 18px;
@@ -47,7 +51,7 @@ header {
         -ms-transition: all 0.1s ease;
         -o-transition: all 0.1s ease;
         transition: all 0.1s ease; }
-      header .cnt-menu a.lnk-menu span.bar3 {
+      header .cnt-menu .lnk-menu span.bar3 {
         display: block;
         position: absolute;
         top: 26px;
@@ -59,22 +63,74 @@ header {
         -ms-transition: all 0.2s ease;
         -o-transition: all 0.2s ease;
         transition: all 0.2s ease; }
-      header .cnt-menu a.lnk-menu:hover span.bar1 {
+      header .cnt-menu .lnk-menu:hover span.bar1 {
         top: 18px;
         -webkit-transform: rotate(50deg);
         -moz-transform: rotate(50deg);
         -o-transform: rotate(50deg);
         transform: rotate(50deg); }
-      header .cnt-menu a.lnk-menu:hover span.bar2 {
+      header .cnt-menu .lnk-menu:hover span.bar2 {
         opacity: 0; }
-      header .cnt-menu a.lnk-menu:hover span.bar3 {
+      header .cnt-menu .lnk-menu:hover span.bar3 {
         top: 18px;
         -webkit-transform: rotate(-50deg);
         -moz-transform: rotate(-50deg);
         -o-transform: rotate(-50deg);
         transform: rotate(-50deg); }
+    header .cnt-menu .lnk-menu-ativo {
+      display: block;
+      overflow: hidden;
+      position: relative;
+      width: 24px;
+      height: 50px;
+      cursor: pointer; }
+      header .cnt-menu .lnk-menu-ativo span.bar1 {
+        display: block;
+        position: absolute;
+        top: 18px;
+        width: 24px;
+        height: 4px;
+        background: #fff;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -ms-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        -webkit-transform: rotate(50deg);
+        -moz-transform: rotate(50deg);
+        -o-transform: rotate(50deg);
+        transform: rotate(50deg); }
+      header .cnt-menu .lnk-menu-ativo span.bar2 {
+        display: block;
+        position: absolute;
+        top: 18px;
+        width: 24px;
+        height: 4px;
+        background: #fff;
+        opacity: 0;
+        -webkit-transition: all 0.1s ease;
+        -moz-transition: all 0.1s ease;
+        -ms-transition: all 0.1s ease;
+        -o-transition: all 0.1s ease;
+        transition: all 0.1s ease; }
+      header .cnt-menu .lnk-menu-ativo span.bar3 {
+        display: block;
+        position: absolute;
+        top: 18px;
+        width: 24px;
+        height: 4px;
+        background: #fff;
+        -webkit-transform: rotate(-50deg);
+        -moz-transform: rotate(-50deg);
+        -o-transform: rotate(-50deg);
+        transform: rotate(-50deg);
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -ms-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        transition: all 0.2s ease; }
   header .cnt-logo {
-    min-height: 100px;
+    height: 100px;
     display: -webkit-flex;
     display: flex;
     -webkit-align-items: center;
@@ -87,7 +143,7 @@ header {
   width: 100%;
   overflow: hidden;
   min-height: 261px;
-  margin-top: 32px; }
+  margin-top: 132px; }
   .section-destaque-temp-1 .news-destaque {
     display: block;
     position: relative; }
@@ -153,6 +209,8 @@ header {
   overflow: hidden;
   min-height: 216px;
   margin-top: 32px; }
+  .section-destaque-temp-2 hr {
+    display: none; }
   .section-destaque-temp-2 .news-destaque {
     display: block;
     position: relative;
@@ -214,6 +272,8 @@ header {
   overflow: hidden;
   min-height: 260px;
   margin-top: 32px; }
+  .section-destaque-temp-3 hr {
+    display: none; }
   .section-destaque-temp-3 .cnt-news {
     display: block;
     position: relative;
@@ -275,6 +335,10 @@ header {
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center; }
+  .section-advertising .show-desktop {
+    display: block; }
+  .section-advertising .show-mobile {
+    display: none; }
 
 .section-segmentos {
   display: block;
@@ -282,6 +346,8 @@ header {
   overflow: hidden;
   min-height: 260px;
   margin-top: 32px; }
+  .section-segmentos hr {
+    display: none; }
   .section-segmentos h2 {
     font-family: Arial, Helvetica, sans-serif;
     color: #004861;
@@ -293,7 +359,8 @@ header {
     display: block;
     position: relative;
     overflow: hidden;
-    height: 260px; }
+    height: 260px;
+    margin-bottom: 20px; }
     .section-segmentos .cnt-news .cnt-imagem {
       display: block;
       margin-bottom: 10px; }
@@ -366,5 +433,74 @@ footer {
     text-rendering: optimizeLegibility;
     text-align: right;
     margin-top: 30px; }
+
+.submenu {
+  display: block;
+  position: fixed;
+  overflow: hidden;
+  top: 100px;
+  background: #004861;
+  width: 100%; }
+  .submenu .cnt-submenu {
+    overflow: hidden;
+    height: 1px;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+    .submenu .cnt-submenu a.lnk-submenu {
+      display: block;
+      width: 20%;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #fff;
+      text-transform: uppercase;
+      text-rendering: optimizeLegibility;
+      font-size: 14px;
+      text-align: center;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      padding: 10px 0;
+      margin-top: 10px;
+      margin-left: auto;
+      margin-right: auto; }
+      .submenu .cnt-submenu a.lnk-submenu:hover {
+        color: #d5e11f;
+        border-bottom: 1px solid #d5e11f; }
+  .submenu .ativo {
+    height: 200px;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+    .submenu .ativo a.lnk-submenu {
+      display: block;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #fff;
+      text-transform: uppercase;
+      text-rendering: optimizeLegibility;
+      font-size: 14px;
+      text-align: center;
+      animation-name: hello;
+      animation-duration: 0.5s;
+      animation-iteration-count: 1; }
+@keyframes hello {
+  0% {
+    margin-top: -50px;
+    opacity: 0;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+  100% {
+    margin-top: 10px;
+    opacity: 1;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; } }
 
 /*# sourceMappingURL=main.css.map */

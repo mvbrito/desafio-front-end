@@ -1,0 +1,157 @@
+
+
+<!-- DESTAQUE TEMPLATE 1 -->
+<section class="section-destaque-temp-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-offset-1 col-md-10">
+        <div class="row">
+          <div class="col-xs-12 col-md-6" ng-repeat="main in dataMain.data | filter: {label: 'Brasil'}">
+            <div class="news-destaque">
+              <img src="assets/media/{{main.image}}" />
+              <div class="cnt-shadow"></div>
+              <a href="{{main.url}}" class="cnt-texto">
+                <h2>{{main.label}}</h2>
+                <h3>{{main.title}}</h3>
+                <p>{{main.description}}</p>
+              </a>
+              <div class="cnt-share">
+                <a href="javascript:void(0);" title="Compartilhar"><img src="assets/media/ico-share.png" /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FIM DESTAQUE TEMPLATE 1 -->
+
+<!-- DESTAQUE TEMPLATE 2 -->
+<section class="section-destaque-temp-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-offset-1 col-md-10">
+        <div class="row">
+          <div class="col-xs-12 col-md-6" ng-repeat="main in dataMain.data | filter: {label: 'Comportamento'}">
+            <a href="{{main.url}}" class="news-destaque">
+              <div class="cnt-imagem">
+                <img src="assets/media/{{main.image}}" />
+              </div>
+              <div class="cnt-texto">
+                <h2>{{main.label}}</h2>
+                <h3>{{main.title}}</h3>
+                <p>{{main.description}}</p>
+                <div class="cnt-share">
+                  <a href="{{main.url}}" title="Compartilhar"><img src="assets/media/ico-share-black.png" /></a>
+                </div>
+              </div>
+            </a>
+            <hr>
+          </div>
+          <div class="col-xs-12 col-md-6" ng-repeat="main in dataMain.data | filter: {label: 'Estilo'}">
+            <a href="{{main.url}}" class="news-destaque">
+              <div class="cnt-imagem">
+                <img src="assets/media/{{main.image}}" />
+              </div>
+              <div class="cnt-texto">
+                <h2>{{main.label}}</h2>
+                <h3>{{main.title}}</h3>
+                <p>{{main.description}}</p>
+                <div class="cnt-share">
+                  <a href="{{main.url}}" title="Compartilhar"><img src="assets/media/ico-share-black.png" /></a>
+                </div>
+              </div>
+            </a>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FIM DESTAQUE TEMPLATE 2 -->
+
+<!-- DESTAQUE TEMPLATE 3 -->
+<section class="section-destaque-temp-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-offset-1 col-md-10">
+        <div class="row">
+          <div class="col-xs-12 col-md-3" ng-repeat="main in dataMain.data | filter: {label: 'Globo Rural'}">
+            <div class="cnt-news">
+              <div class="cnt-imagem">
+                <a href="{{main.url}}"><img src="assets/media/{{main.image}}" /></a>
+              </div>
+              <div class="cnt-texto">
+                <a href="{{main.url}}">
+                  <h2>{{main.label}}</h2>
+                  <h3>{{main.title}}</h3>
+                  <p>{{main.description}}</p>
+                </a>
+              </div>
+              <div class="cnt-share">
+                <a href="{{main.url}}" title="Compartilhar"><img src="assets/media/ico-share-black.png" /></a>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <div class="col-xs-12 col-md-3" ng-repeat="main in dataMain.data | filter: {label: 'Rio 2016'}">
+            <div class="cnt-news">
+              <div class="cnt-imagem">
+                <a href="{{main.url}}"><img src="assets/media/{{main.image}}" /></a>
+              </div>
+              <div class="cnt-texto">
+                <a href="{{main.url}}">
+                  <h2>{{main.label}}</h2>
+                  <h3>{{main.title}}</h3>
+                  <p>{{main.description}}</p>
+                </a>
+              </div>
+              <div class="cnt-share">
+                <a href="{{main.url}}" title="Compartilhar"><img src="assets/media/ico-share-black.png" /></a>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <div class="col-xs-12 col-md-3" ng-repeat="main in dataMain.data | filter: {label: 'Educação'}">
+            <div class="cnt-news">
+              <div class="cnt-imagem">
+                <a href="{{main.url}}"><img src="assets/media/{{main.image}}" /></a>
+              </div>
+              <div class="cnt-texto">
+                <a href="{{main.url}}">
+                  <h2>{{main.label}}</h2>
+                  <h3>{{main.title}}</h3>
+                  <p>{{main.description}}</p>
+                </a>
+              </div>
+              <div class="cnt-share">
+                <a href="{{main.url}}" title="Compartilhar"><img src="assets/media/ico-share-black.png" /></a>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <div class="col-xs-12 col-md-3" ng-repeat="main in dataMain.data | filter: {label: 'Eco'}">
+            <div class="cnt-news">
+              <div class="cnt-imagem">
+                <a href="{{main.url}}"><img src="assets/media/{{main.image}}" /></a>
+              </div>
+              <div class="cnt-texto">
+                <a href="{{main.url}}">
+                  <h2>{{main.label}}</h2>
+                  <h3>{{main.title}}</h3>
+                  <p>{{main.description}}</p>
+                </a>
+              </div>
+              <div class="cnt-share">
+                <a href="{{main.url}}" title="Compartilhar"><img src="assets/media/ico-share-black.png" /></a>
+              </div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FIM DESTAQUE TEMPLATE 3 -->

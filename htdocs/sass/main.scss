@@ -16,90 +16,146 @@ $verde-lighting: #d5e11f;
 
 // RESET PADDING
 .reset-padding {
-    padding: 0;
+  padding: 0;
 
-    &::selection {
-        border: none;
-    }
+  &::selection {
+    border: none;
+  }
 }
 
 
 // HEADER
 header {
-    @include section-default(100px);
-    background: $azul;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  height: 100px;
+  background: $azul;
+  position: fixed;
+  top: 0;
+  z-index: 2;
 
-    .cnt-menu {
-        min-height: 100px;
-        @include vertical-center;
+  .cnt-menu {
+    height: 100px;
+    @include vertical-center;
 
-        a.lnk-menu {
-            display: block;
-            overflow: hidden;
-            position: relative;
-            width: 24px;
-            height: 50px;
-            
-            span.bar1 {
-                display: block;
-                position: absolute;
-                top: 10px;
-                width: 24px;
-                height: 4px;
-                background: $branco;
-                @include transition(0.2s);
-            }
-    
-            span.bar2 {
-                display: block;
-                position: absolute;
-                top: 18px;
-                width: 24px;
-                height: 4px;
-                background: $branco;
-                @include transition(0.1s);
-            }
-    
-            span.bar3 {
-                display: block;
-                position: absolute;
-                top: 26px;
-                width: 24px;
-                height: 4px;
-                background: $branco;
-                @include transition(0.2s);
-            }
+    .lnk-menu {
+      display: block;
+      overflow: hidden;
+      position: relative;
+      width: 24px;
+      height: 50px;
+      cursor: pointer;
 
-            &:hover {
-                span.bar1 {
-                    top: 18px;
-                    -webkit-transform: rotate(50deg);
-                    -moz-transform: rotate(50deg);
-                    -o-transform: rotate(50deg);
-                    transform: rotate(50deg);
-                } 
-                span.bar2 {
-                    opacity: 0;
-                } 
-                span.bar3 {
-                    top: 18px;
-                    -webkit-transform: rotate(-50deg);
-                    -moz-transform: rotate(-50deg);
-                    -o-transform: rotate(-50deg);
-                    transform: rotate(-50deg);
-                } 
-            }
-    
+      span.bar1 {
+        display: block;
+        position: absolute;
+        top: 10px;
+        width: 24px;
+        height: 4px;
+        background: $branco;
+        @include transition(0.2s);
+      }
+
+      span.bar2 {
+        display: block;
+        position: absolute;
+        top: 18px;
+        width: 24px;
+        height: 4px;
+        background: $branco;
+        @include transition(0.1s);
+      }
+
+      span.bar3 {
+        display: block;
+        position: absolute;
+        top: 26px;
+        width: 24px;
+        height: 4px;
+        background: $branco;
+        @include transition(0.2s);
+      }
+
+      &:hover {
+        span.bar1 {
+          top: 18px;
+          -webkit-transform: rotate(50deg);
+          -moz-transform: rotate(50deg);
+          -o-transform: rotate(50deg);
+          transform: rotate(50deg);
         }
+        span.bar2 {
+          opacity: 0;
+        }
+        span.bar3 {
+          top: 18px;
+          -webkit-transform: rotate(-50deg);
+          -moz-transform: rotate(-50deg);
+          -o-transform: rotate(-50deg);
+          transform: rotate(-50deg);
+        }
+      }
 
     }
 
-    .cnt-logo {
-        min-height: 100px;
-        @include vertical-center;
+    .lnk-menu-ativo {
+      display: block;
+      overflow: hidden;
+      position: relative;
+      width: 24px;
+      height: 50px;
+      cursor: pointer;
+
+      span.bar1 {
+        display: block;
+        position: absolute;
+        top: 18px;
+        width: 24px;
+        height: 4px;
+        background: $branco;
+        @include transition(0.2s);
+        -webkit-transform: rotate(50deg);
+        -moz-transform: rotate(50deg);
+        -o-transform: rotate(50deg);
+        transform: rotate(50deg);
+      }
+
+      span.bar2 {
+        display: block;
+        position: absolute;
+        top: 18px;
+        width: 24px;
+        height: 4px;
+        background: $branco;
+        opacity: 0;
+        @include transition(0.1s);
+      }
+
+      span.bar3 {
+        display: block;
+        position: absolute;
+        top: 18px;
+        width: 24px;
+        height: 4px;
+        background: $branco;
+        -webkit-transform: rotate(-50deg);
+        -moz-transform: rotate(-50deg);
+        -o-transform: rotate(-50deg);
+        transform: rotate(-50deg);
+        @include transition(0.2s);
+      }
+
     }
 
-       
+  }
+
+  .cnt-logo {
+    height: 100px;
+    @include vertical-center;
+  }
+
+
 
 }
 
@@ -107,65 +163,65 @@ header {
 
 // SECTION DESTAQUE TEMPLATE 1
 .section-destaque-temp-1 {
-    @include section-default(261px);
-    margin-top: 32px;
+  @include section-default(261px);
+  margin-top: 132px;
 
-    .news-destaque {
+  .news-destaque {
+    display: block;
+    position: relative;
+
+    .cnt-shadow {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 464px;
+      height: 100%;
+      @include sombra-destaques;
+    }
+
+    .cnt-texto {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      padding: 20px 25px 20px 25px;
+      text-decoration: none;
+
+      h2 {
+        @include font-assunto($branco);
         display: block;
-        position: relative;
+        margin:0;
+        padding:0;
+      }
 
-        .cnt-shadow {
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 464px;
-            height: 100%;
-            @include sombra-destaques;
-        }
+      h3 {
+        @include font-titulo($branco);
+        margin:0;
+        padding: 5px 0;
+        font-size: 21px;
+      }
 
-        .cnt-texto {
-            display: block;
-            position: absolute;
-            bottom: 0;
-            padding: 20px 25px 20px 25px;
-            text-decoration: none;
+      p {
+        @include font-descricao($branco);
+        margin:0;
+        padding:0;
+      }
 
-            h2 {
-                @include font-assunto($branco);
-                display: block;
-                margin:0;
-                padding:0;
-            }
-
-            h3 {
-                @include font-titulo($branco);
-                margin:0;
-                padding: 5px 0;
-                font-size: 21px;
-            }
-
-            p {
-               @include font-descricao($branco);
-               margin:0;
-               padding:0;
-            }
-
-            &:hover {
-                color: $branco;
-                text-decoration: underline;
-            }
-
-        }
-
-        .cnt-share {
-            display: block;
-            position: absolute;
-            top: 20px;
-            right: 25px;
-        }
+      &:hover {
+        color: $branco;
+        text-decoration: underline;
+      }
 
     }
+
+    .cnt-share {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 25px;
+    }
+
+  }
 
 }
 // FIM SECTION DESTAQUE TEMPLATE 1
@@ -173,70 +229,74 @@ header {
 
 // SECTION DESTAQUE TEMPLATE 2
 .section-destaque-temp-2 {
-    @include section-default(216px);
-    margin-top: 32px;
+  @include section-default(216px);
+  margin-top: 32px;
 
-    .news-destaque {
-        display: block;
-        position: relative;
-        text-decoration: none;
-        &:hover {
-            text-decoration: underline;
-            color: $preto;
-        }
+  hr {
+    display: none;
+  }
+
+  .news-destaque {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      color: $preto;
+    }
+  }
+
+  .cnt-imagem {
+    display: block;
+    float: left;
+  }
+
+  .cnt-texto {
+    display: block;
+    float: left;
+    position: relative;
+    width: 232px;
+    height: 216px;
+    padding: 10px 0 0 16px;
+
+    .lnk-destaque {
+      display: block;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+        color: $preto;
+      }
     }
 
-    .cnt-imagem {
-        display: block;
-        float: left;
+    h2 {
+      @include font-assunto($azul);
+      display: block;
+      margin:0;
+      padding:0;
     }
 
-    .cnt-texto {
-        display: block;
-        float: left;
-        position: relative;
-        width: 232px;
-        height: 216px;
-        padding: 10px 0 0 16px;
-
-        .lnk-destaque {
-            display: block;
-            text-decoration: none;
-
-            &:hover {
-                text-decoration: underline;
-                color: $preto;
-            }
-        }
-
-        h2 {
-            @include font-assunto($azul);
-            display: block;
-            margin:0;
-            padding:0;
-        }
-
-        h3 {
-            @include font-titulo($preto);
-            margin:0;
-            padding: 5px 0;
-            font-size: 17px;
-        }
-
-        p {
-           @include font-descricao($preto);
-           margin:0;
-           padding:0;
-        }
-
-        .cnt-share {
-            display: block;
-            position: absolute;
-            left: 16px;
-            bottom: 0;
-        }
-
+    h3 {
+      @include font-titulo($preto);
+      margin:0;
+      padding: 5px 0;
+      font-size: 17px;
     }
+
+    p {
+      @include font-descricao($preto);
+      margin:0;
+      padding:0;
+    }
+
+    .cnt-share {
+      display: block;
+      position: absolute;
+      left: 16px;
+      bottom: 0;
+    }
+
+  }
 
 }
 // FIM SECTION DESTAQUE TEMPLATE 2
@@ -244,58 +304,61 @@ header {
 
 // SECTION DESTAQUE TEMPLATE 3
 .section-destaque-temp-3 {
-    @include section-default(260px);
-    margin-top: 32px;
+  @include section-default(260px);
+  margin-top: 32px;
 
-    .cnt-news {
+  hr {
+    display: none;
+  }
+
+  .cnt-news {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: 260px;
+    .cnt-imagem {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .cnt-texto {
+      display: block;
+
+      a {
+        text-decoration: none;
+      }
+
+      h2 {
+        @include font-assunto($azul);
         display: block;
-        position: relative;
-        overflow: hidden;
-        height: 260px;
+        margin:0;
+        padding:0;
+      }
 
-        .cnt-imagem {
-            display: block;
-            margin-bottom: 10px;
-        }
+      h3 {
+        @include font-titulo($preto);
+        margin:0;
+        padding: 5px 0;
+        font-size: 17px;
+      }
 
-        .cnt-texto {
-            display: block;
-
-            a {
-                text-decoration: none;
-            }
-
-            h2 {
-                @include font-assunto($azul);
-                display: block;
-                margin:0;
-                padding:0;
-            }
-    
-            h3 {
-                @include font-titulo($preto);
-                margin:0;
-                padding: 5px 0;
-                font-size: 17px;
-            }
-    
-            p {
-               @include font-descricao($preto);
-               margin:0;
-               padding:0;
-            }
-
-        }
-
-        .cnt-share {
-            display: block;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            height: 20px;
-        }
+      p {
+        @include font-descricao($preto);
+        margin:0;
+        padding:0;
+      }
 
     }
+
+    .cnt-share {
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 20px;
+    }
+
+  }
 
 }
 // FIM SECTION DESTAQUE TEMPLATE 3
@@ -303,92 +366,105 @@ header {
 
 // SECTION ADVERTISING
 .section-advertising {
-    @include section-default(148px);
-    margin-top: 32px;
-    border-top: 1px solid $cinza;
-    border-bottom: 1px solid $cinza;
-    background: $cinza-claro;
-    text-align: center;
-    @include vertical-center;
+  @include section-default(148px);
+  margin-top: 32px;
+  border-top: 1px solid $cinza;
+  border-bottom: 1px solid $cinza;
+  background: $cinza-claro;
+  text-align: center;
+  @include vertical-center;
+
+  .show-desktop {
+    display: block;
+  }
+
+  .show-mobile {
+    display: none;
+  }
+
 }
 // FIM SECTION ADVERTISING
 
 
 // SECTION SEGMENTOS
 .section-segmentos {
-    @include section-default(260px);
-    margin-top: 32px;
+  @include section-default(260px);
+  margin-top: 32px;
 
-    h2 {
-        @include font-titulo-secao($azul);
-        font-size: 24px;
+  hr {
+    display: none;
+  }
+
+  h2 {
+    @include font-titulo-secao($azul);
+    font-size: 24px;
+  }
+
+  .cnt-news {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: 260px;
+    margin-bottom: 20px;
+    .cnt-imagem {
+      display: block;
+      margin-bottom: 10px;
     }
 
-    .cnt-news {
+    .cnt-texto {
+      display: block;
+
+      a {
+        text-decoration: none;
+      }
+
+      h2 {
+        @include font-assunto($azul);
         display: block;
-        position: relative;
-        overflow: hidden;
-        height: 260px;
+        margin:0;
+        padding:0;
+      }
 
-        .cnt-imagem {
-            display: block;
-            margin-bottom: 10px;
-        }
+      h3 {
+        @include font-titulo($preto);
+        margin:0;
+        padding: 5px 0;
+        font-size: 17px;
+      }
 
-        .cnt-texto {
-            display: block;
-
-            a {
-                text-decoration: none;
-            }
-
-            h2 {
-                @include font-assunto($azul);
-                display: block;
-                margin:0;
-                padding:0;
-            }
-    
-            h3 {
-                @include font-titulo($preto);
-                margin:0;
-                padding: 5px 0;
-                font-size: 17px;
-            }
-    
-            p {
-               @include font-descricao($preto);
-               margin:0;
-               padding:0;
-            }
-
-        }
-
-        .cnt-share {
-            display: block;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            height: 20px;
-        }
+      p {
+        @include font-descricao($preto);
+        margin:0;
+        padding:0;
+      }
 
     }
 
-    .cnt-lnk-mais {
-        display: block;
-        border-top: 1px solid $cinza-super-claro;
-        border-bottom: 1px solid $cinza-super-claro;
-        margin-top: 15px;
-        margin-bottom: 30px;
-        text-align: right;
-        padding: 8px 0;
-
-        .lnk-mais {
-            @include lnk-mais($azul);
-            font-size: 18px;
-        }
-
+    .cnt-share {
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 20px;
     }
+
+  }
+
+  .cnt-lnk-mais {
+    display: block;
+    border-top: 1px solid $cinza-super-claro;
+    border-bottom: 1px solid $cinza-super-claro;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    text-align: right;
+    padding: 8px 0;
+
+    .lnk-mais {
+      @include lnk-mais($azul);
+      font-size: 18px;
+    }
+
+  }
 
 }
 // FIM SECTION SEGMENTOS
@@ -396,18 +472,87 @@ header {
 
 // FOOTER
 footer {
-    @include section-default(81px);
-    background: $verde-lighting;
+  @include section-default(81px);
+  background: $verde-lighting;
 
-    img {
-        margin-top: 30px;
-    }
+  img {
+    margin-top: 30px;
+  }
 
-    .copyright {
-        @include font-assunto($preto);
-        text-align: right;
-        margin-top: 30px;
-    }
+  .copyright {
+    @include font-assunto($preto);
+    text-align: right;
+    margin-top: 30px;
+  }
 
 }
 // FIM FOOTER
+
+// SUBMENU
+.submenu {
+  display: block;
+  position: fixed;
+  overflow: hidden;
+  top: 100px;
+  background: $azul;
+  width: 100%;
+  
+  .cnt-submenu{
+    overflow: hidden;
+    height: 1px;
+    @include transition(0.2s);
+
+    a.lnk-submenu {
+      display: block;
+      width: 20%;
+      @include lnk-submenu($branco);
+      font-size: 14px;
+      text-align: center;
+      text-decoration: none;
+      border-bottom:1px solid rgba(255,255,255,0.5);
+      padding: 10px 0;
+      margin-top: 10px;
+      margin-left: auto;
+      margin-right: auto;
+
+      &:hover {
+        color: #d5e11f;
+        border-bottom:1px solid #d5e11f;
+      }
+
+    }
+
+  }
+
+  .ativo {
+    height: 200px;
+    @include transition(0.2s);
+
+    a.lnk-submenu {
+      display: block;
+      @include lnk-submenu($branco);
+      font-size: 14px;
+      text-align: center;
+      animation-name: hello;
+      animation-duration: 0.5s;
+      //animation-delay: 2s;
+      animation-iteration-count: 1;
+    }
+
+    @keyframes hello {
+      0% {
+        margin-top: -50px;
+        opacity: 0;
+        @include transition(0.2s);
+      }
+      100% {
+        margin-top: 10px;
+        opacity: 1;
+        @include transition(0.2s);
+      }
+    }
+
+  }
+
+}
+// FIM SUBMENU

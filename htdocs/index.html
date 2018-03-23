@@ -1,484 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en" ng-app="infoGlobo">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>InfoGlobo</title>
+  <!-- SEO -->
+  <meta name="description" content="Últimas notícias de economia, política, carros, emprego, educação, ciência, saúde, cultura do Brasil e do mundo.">
+  <meta name="keywords" content="jornalismo, notícias, vídeos, Brasil, mundo, economia, negócios, política, eleições 2010, crime, justiça, carros, concursos, empregos, educação, vestibular, ciência, saúde, tecnologia, internet, jogos, games, planeta bizarro, pop e arte, cultura, cinema, filmes, música, rio de janeiro, são paulo, previsão do tempo, trânsito, jornal nacional, jornal hoje, jornal da globo, bom dia brasil">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="busca:title" content="Infoglobo"/>
+  <meta property="busca:species" content="Home"/>
+  <meta property="busca:publisher" content=""/>
+  <meta property="busca:issued" content=""/>
+  <meta property="busca:modified" content=""/>
+  <meta property="busca:image" content="" />
+  <meta itemprop="name" content="">
+  <meta itemprop="url" content="">
+  <meta itemprop="image" content="">
+  <meta itemprop="description" content="">
+  <link rel="canonical" href="#">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:description" content="Últimas notícias de economia, política, carros, emprego, educação, ciência, saúde, cultura do Brasil e do mundo.">
+  <meta property="og:title" content="Infoglobo">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Infoglobo">
+  <meta property="og:image" content="">
+  <meta property="fb:app_id" content="">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="#">
 
-    <!-- Bootstrap -->
-    <link href="resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>InfoGlobo</title>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <!-- Bootstrap -->
+  <link href="resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom Css -->
-    <link href="assets/style/main.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
 
-  </head>
-  <body>
+  <!-- Custom Css -->
+  <link href="assets/style/main.css" rel="stylesheet">
+  <link href="assets/style/mobile.css" rel="stylesheet">
 
-    <!-- HEADER -->
-    <header>
+  <!-- Angular -->
+  <script src="assets/lib/angular.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/controller/main.controller.js"></script>
+  <script src="assets/js/services/infoAPIservice.js"></script>
+
+
+</head>
+<body ng-controller="infoCtrl">
+
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+  
+      <div class="row">
+        <div class="col-xs-12 col-md-offset-1 col-md-10">
+  
+          <div class="row">
+            <div class="col-xs-2 col-md-1 cnt-menu">
+              <div class="lnk-menu" id="btMenu">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+              </div>
+            </div>
+            <div class="col-xs-10 col-md-11 cnt-logo">
+              <h1><img src="assets/media/logo-infoglobo.jpg" /></h1>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+  
+    </div>
+  
+    <div class="submenu">
+      <div class="cnt-submenu" id="cntSbmn">
         <div class="container">
 
-            <div class="row">
-                <div class="col-xs-12 col-md-offset-1 col-md-10">
+          <div class="row">
+            <div class="col-xs-12 col-md-offset-1 col-md-10">
+              
+              <a href="javascript:void(0);" class="lnk-submenu">Link 01</a>
+              <a href="javascript:void(0);" class="lnk-submenu">Link 02</a>
+              <a href="javascript:void(0);" class="lnk-submenu">Link 03</a>
 
-                    <div class="row">
-                        <div class="col-xs-12 col-md-1 cnt-menu">
-                            <a href="javascript:void(0);" class="lnk-menu">
-                                <span class="bar1"></span>
-                                <span class="bar2"></span>
-                                <span class="bar3"></span>
-                            </a>
-                        </div>
-                        <div class="col-xs-12 col-md-11 cnt-logo">
-                            <img src="assets/media/logo-infoglobo.jpg" />
-                        </div>
-                    </div>
-
-                </div>
             </div>
+          </div>
 
         </div>
-    </header>
-    <!-- FIM HEADER -->
+      </div>
+    </div>
+  
+  </header>
+  <!-- FIM HEADER -->
 
-    <!-- DESTAQUE TEMPLATE 1 -->
-    <section class="section-destaque-temp-1">
-        <div class="container">
+  <!-- MAIN -->
+  <div ng-include="'view/main.html'"></div>
+  <!-- END MAIN -->
 
-            <div class="row">
-                <div class="col-xs-12 col-md-offset-1 col-md-10">
+  <!-- ADVERTISING -->
+  <div ng-include="'view/advertisin.html'"></div>
+  <!-- FIM ADVERTISING -->
 
-                    <div class="row">
-                        <div class="col-xs-12 col-md-6">
-                            <div class="news-destaque">
-                                <img src="assets/media/464x261-1.jpeg" />
-                                <div class="cnt-shadow"></div>
-                                <a href="javascript:void(0);" class="cnt-texto">
-                                    <h2>brasil</h2>
-                                    <h3>Nullam arcu lacus, tincidunt vel efficitur</h3>
-                                    <p>
-                                        Vivamus vitae mauris eget enim gravida eleifend. Nunc et diam dolor. Suspendisse dapibus turpis enim
-                                    </p>
-                                </a>
-                                <div class="cnt-share">
-                                    <a href="javascript:void(0);" title="Compartilhar"><img src="assets/media/ico-share.png" /></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-6">
-                            <div class="news-destaque">
-                                <img src="assets/media/464x261-2.jpeg" />
-                                <div class="cnt-shadow"></div>
-                                <a href="javascript:void(0);" class="cnt-texto">
-                                    <h2>brasil</h2>
-                                    <h3>Nullam arcu lacus, tincidunt vel efficitur</h3>
-                                    <p>
-                                        Vivamus vitae mauris eget enim gravida eleifend. Nunc et diam dolor. Suspendisse dapibus turpis enim
-                                    </p>
-                                </a>
-                                <div class="cnt-share">
-                                    <a href="javascript:void(0);" title="Compartilhar"><img src="assets/media/ico-share.png" /></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!-- FIM DESTAQUE TEMPLATE 1 -->
-
-    <!-- DESTAQUE TEMPLATE 2 -->
-    <section class="section-destaque-temp-2">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-xs-12 col-md-offset-1 col-md-10">
-                    
-                    <div class="row">
-                        <div class="col-xs-12 col-md-6">
-                            <a href="javascript:void(0);" class="news-destaque">
-                                <div class="cnt-imagem">
-                                    <img src="assets/media/216x216-1.jpeg" />
-                                </div>
-                                <div class="cnt-texto">
-                                    <h2>comportamento</h2>
-                                    <h3>Suspendisse dapibus turpis enim, ac commodo</h3>
-                                    <p>
-                                        Nullam ac turpis tellus. Morbi tincidunt nulla in massa condimentum, vitae scelerisque
-                                    </p>
-                                    <div class="cnt-share">
-                                        <a href="javascript:void(0);" title="Compartilhar"><img src="assets/media/ico-share-black.png" /></a>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-xs-12 col-md-6">
-                            <a href="javascript:void(0);" class="news-destaque">
-                                <div class="cnt-imagem">
-                                    <img src="assets/media/216x216-2.jpeg" />
-                                </div>
-                                <div class="cnt-texto">
-                                    <h2>estilo</h2>
-                                    <h3>Ut eleifend bibendum eros vitae volutpat odio porta</h3>
-                                    <p>
-                                        Integer suscipit tellus ut elit mollis vehicula. Nullam arcu lacus, tincidunt vel efficitur eget, venenatis sit amet nisi. Fusce ut faucibus urna
-                                    </p>
-                                    <div class="cnt-share">
-                                        <a href="javascript:void(0);" title="Compartilhar"><img src="assets/media/ico-share-black.png" /></a>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!-- FIM DESTAQUE TEMPLATE 2 -->
-
-    <!-- DESTAQUE TEMPLATE 3 -->
-    <section class="section-destaque-temp-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-md-offset-1 col-md-10">
-
-                    <div class="row">
-                        <div class="col-xs-12 col-md-3">
-                            <div class="cnt-news">
-                                <div class="cnt-imagem">
-                                    <a href="javascript:void(0);"><img src="assets/media/216x121-1.jpeg" /></a>
-                                </div>
-                                <div class="cnt-texto">
-                                    <a href="javascript:void(0);">
-                                        <h2>globo rural</h2>
-                                        <h3>Ut eleifend bibendum eros vitae volutpat odio</h3>
-                                        <p>
-                                            Integer suscipit tellus ut elit mollis vehicula. Nullam arcu lacus
-                                        </p>
-                                    </a>
-                                </div>
-                                <div class="cnt-share">
-                                    <a href="javascript:void(0);" title="Compartilhar"><img src="assets/media/ico-share-black.png" /></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-3">
-                            <div class="cnt-news">
-                                <div class="cnt-imagem">
-                                    <a href="javascript:void(0);"><img src="assets/media/216x121-2.jpeg" /></a>
-                                </div>
-                                <div class="cnt-texto">
-                                    <a href="javascript:void(0);">
-                                        <h2>globo rural</h2>
-                                        <h3>Ut eleifend bibendum eros vitae volutpat odio</h3>
-                                        <p>
-                                            Integer suscipit tellus ut elit mollis vehicula. Nullam arcu lacus
-                                        </p>
-                                    </a>
-                                </div>
-                                <div class="cnt-share">
-                                    <a href="javascript:void(0);" title="Compartilhar"><img src="assets/media/ico-share-black.png" /></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-3">
-                            <div class="cnt-news">
-                                <div class="cnt-imagem">
-                                    <a href="javascript:void(0);"><img src="assets/media/216x121-3.jpeg" /></a>
-                                </div>
-                                <div class="cnt-texto">
-                                    <a href="javascript:void(0);">
-                                        <h2>globo rural</h2>
-                                        <h3>Ut eleifend bibendum eros vitae volutpat odio</h3>
-                                        <p>
-                                            Integer suscipit tellus ut elit mollis vehicula. Nullam arcu lacus
-                                        </p>
-                                    </a>
-                                </div>
-                                <div class="cnt-share">
-                                    <a href="javascript:void(0);" title="Compartilhar"><img src="assets/media/ico-share-black.png" /></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-3">
-                            <div class="cnt-news">
-                                <div class="cnt-imagem">
-                                    <a href="javascript:void(0);"><img src="assets/media/216x121-4.jpeg" /></a>
-                                </div>
-                                <div class="cnt-texto">
-                                    <a href="javascript:void(0);">
-                                        <h2>globo rural</h2>
-                                        <h3>Ut eleifend bibendum eros vitae volutpat odio</h3>
-                                        <p>
-                                            Integer suscipit tellus ut elit mollis vehicula. Nullam arcu lacus
-                                        </p>
-                                    </a>
-                                </div>
-                                <div class="cnt-share">
-                                    <a href="javascript:void(0);" title="Compartilhar"><img src="assets/media/ico-share-black.png" /></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- FIM DESTAQUE TEMPLATE 3 -->
+  <!-- SEÇÃO BRASIL -->
+  <div ng-include="'view/mainBrasil.html'"></div>
+  <!-- FIM SEÇÃO BRASIL -->
 
 
-    <!-- ADVERTISING -->
-    <section class="section-advertising">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-md-offset-1 col-md-10">
+  <!-- SEÇÃO MUNDO -->
+  <div ng-include="'view/mainMundo.html'"></div>
+  <!-- FIM SEÇÃO MUNDO -->
 
-                    <a href="javascript:void(0);"><img src="assets/media/exemplo-banner-advertising-728x90.jpg" /></a>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- FIM ADVERTISING -->
+  <!-- FOOTER -->
+  <div ng-include="'view/footer.html'"></div>
+  <!-- FIM FOOTER -->
 
 
-    <!-- SEÇÃO BRASIL -->
-    <section class="section-segmentos">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-md-offset-1 col-md-10">
-
-                    <h2>Brasil</h2>
-
-                    <div class="row">
-                        <div class="col-xs-12 col-md-3">
-                            <div class="cnt-news">
-                                <div class="cnt-imagem">
-                                    <a href="javascript:void(0);"><img src="assets/media/216x121-1.jpeg" /></a>
-                                </div>
-                                <div class="cnt-texto">
-                                    <a href="javascript:void(0);">
-                                        <h2>globo rural</h2>
-                                        <h3>Ut eleifend bibendum eros vitae volutpat odio</h3>
-                                        <p>
-                                            Integer suscipit tellus ut elit mollis vehicula. Nullam arcu lacus
-                                        </p>
-                                    </a>
-                                </div>
-                                <div class="cnt-share">
-                                    <a href="javascript:void(0);" title="Compartilhar"><img src="assets/media/ico-share-black.png" /></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-3">
-                            <div class="cnt-news">
-                                <div class="cnt-imagem">
-                                    <a href="javascript:void(0);"><img src="assets/media/216x121-2.jpeg" /></a>
-                                </div>
-                                <div class="cnt-texto">
-                                    <a href="javascript:void(0);">
-                                        <h2>globo rural</h2>
-                                        <h3>Ut eleifend bibendum eros vitae volutpat odio</h3>
-                                        <p>
-                                            Integer suscipit tellus ut elit mollis vehicula. Nullam arcu lacus
-                                        </p>
-                                    </a>
-                                </div>
-                                <div class="cnt-share">
-                                    <a href="javascript:void(0);" title="Compartilhar"><img src="assets/media/ico-share-black.png" /></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-3">
-                            <div class="cnt-news">
-                                <div class="cnt-imagem">
-                                    <a href="javascript:void(0);"><img src="assets/media/216x121-3.jpeg" /></a>
-                                </div>
-                                <div class="cnt-texto">
-                                    <a href="javascript:void(0);">
-                                        <h2>globo rural</h2>
-                                        <h3>Ut eleifend bibendum eros vitae volutpat odio</h3>
-                                        <p>
-                                            Integer suscipit tellus ut elit mollis vehicula. Nullam arcu lacus
-                                        </p>
-                                    </a>
-                                </div>
-                                <div class="cnt-share">
-                                    <a href="javascript:void(0);" title="Compartilhar"><img src="assets/media/ico-share-black.png" /></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-3">
-                            <div class="cnt-news">
-                                <div class="cnt-imagem">
-                                    <a href="javascript:void(0);"><img src="assets/media/216x121-4.jpeg" /></a>
-                                </div>
-                                <div class="cnt-texto">
-                                    <a href="javascript:void(0);">
-                                        <h2>globo rural</h2>
-                                        <h3>Ut eleifend bibendum eros vitae volutpat odio</h3>
-                                        <p>
-                                            Integer suscipit tellus ut elit mollis vehicula. Nullam arcu lacus
-                                        </p>
-                                    </a>
-                                </div>
-                                <div class="cnt-share">
-                                    <a href="javascript:void(0);" title="Compartilhar"><img src="assets/media/ico-share-black.png" /></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-12 cnt-lnk-mais">
-                            <a href="javascript:void(0);" class="lnk-mais">brasil +</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- FIM SEÇÃO BRASIL -->
-
-
-    <!-- SEÇÃO MUNDO -->
-    <section class="section-segmentos">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-md-offset-1 col-md-10">
-
-                    <h2>Mundo</h2>
-
-                    <div class="row">
-                        <div class="col-xs-12 col-md-3">
-                            <div class="cnt-news">
-                                <div class="cnt-imagem">
-                                    <a href="javascript:void(0);"><img src="assets/media/216x121-1.jpeg" /></a>
-                                </div>
-                                <div class="cnt-texto">
-                                    <a href="javascript:void(0);">
-                                        <h2>globo rural</h2>
-                                        <h3>Ut eleifend bibendum eros vitae volutpat odio</h3>
-                                        <p>
-                                            Integer suscipit tellus ut elit mollis vehicula. Nullam arcu lacus
-                                        </p>
-                                    </a>
-                                </div>
-                                <div class="cnt-share">
-                                    <a href="javascript:void(0);" title="Compartilhar"><img src="assets/media/ico-share-black.png" /></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-3">
-                            <div class="cnt-news">
-                                <div class="cnt-imagem">
-                                    <a href="javascript:void(0);"><img src="assets/media/216x121-2.jpeg" /></a>
-                                </div>
-                                <div class="cnt-texto">
-                                    <a href="javascript:void(0);">
-                                        <h2>globo rural</h2>
-                                        <h3>Ut eleifend bibendum eros vitae volutpat odio</h3>
-                                        <p>
-                                            Integer suscipit tellus ut elit mollis vehicula. Nullam arcu lacus
-                                        </p>
-                                    </a>
-                                </div>
-                                <div class="cnt-share">
-                                    <a href="javascript:void(0);" title="Compartilhar"><img src="assets/media/ico-share-black.png" /></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-3">
-                            <div class="cnt-news">
-                                <div class="cnt-imagem">
-                                    <a href="javascript:void(0);"><img src="assets/media/216x121-3.jpeg" /></a>
-                                </div>
-                                <div class="cnt-texto">
-                                    <a href="javascript:void(0);">
-                                        <h2>globo rural</h2>
-                                        <h3>Ut eleifend bibendum eros vitae volutpat odio</h3>
-                                        <p>
-                                            Integer suscipit tellus ut elit mollis vehicula. Nullam arcu lacus
-                                        </p>
-                                    </a>
-                                </div>
-                                <div class="cnt-share">
-                                    <a href="javascript:void(0);" title="Compartilhar"><img src="assets/media/ico-share-black.png" /></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-3">
-                            <div class="cnt-news">
-                                <div class="cnt-imagem">
-                                    <a href="javascript:void(0);"><img src="assets/media/216x121-4.jpeg" /></a>
-                                </div>
-                                <div class="cnt-texto">
-                                    <a href="javascript:void(0);">
-                                        <h2>globo rural</h2>
-                                        <h3>Ut eleifend bibendum eros vitae volutpat odio</h3>
-                                        <p>
-                                            Integer suscipit tellus ut elit mollis vehicula. Nullam arcu lacus
-                                        </p>
-                                    </a>
-                                </div>
-                                <div class="cnt-share">
-                                    <a href="javascript:void(0);" title="Compartilhar"><img src="assets/media/ico-share-black.png" /></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-12 cnt-lnk-mais">
-                            <a href="javascript:void(0);" class="lnk-mais">mundo +</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- FIM SEÇÃO MUNDO -->
-
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-md-offset-1 col-md-10">
-
-                    <div class="row">
-                        <div class="col-xs-12 col-md-6">
-                            <img src="assets/media/logo-infoglobo-footer.jpg" />
-                        </div>
-                        <div class="col-xs-12 col-md-6 copyright">
-                                COPYRIGHT © 2017<br />
-                                TODOS OS DIREITOS RESERVADOS
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- FIM FOOTER -->
-    
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="resources/bootstrap/js/bootstrap.min.js"></script>
-
-  </body>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="resources/bootstrap/js/bootstrap.min.js"></script>
+  
+</body>
 </html>

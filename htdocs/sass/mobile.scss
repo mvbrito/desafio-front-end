@@ -1,0 +1,314 @@
+// MIXINS
+@import 'mixins';
+
+// COLORS
+$branco: #fff;
+$preto: #000;
+$azul: #004861;
+$cinza: #ccc;
+$cinza-claro: #eee;
+$cinza-escuro: #999;
+$cinza-super-claro: #e0e0e0;
+$verde-lighting: #d5e11f;
+
+
+// BREAKPOINT 320px
+@media screen and (max-width: 320px) {
+
+    // Header
+    header {
+        height: 50px!important;
+
+        .cnt-menu {
+            height: 50px!important;
+            margin-top: 5px;
+        }
+
+        .cnt-logo {
+            height: 50px!important;
+
+            h1 {
+                margin-top: 0;
+                margin-left: -30px;
+                padding: 0;
+            }
+            img {
+                width: 129px;
+                height: 17px;
+            }
+        }
+        
+    }
+    // Fim Header
+
+    // Template 1
+    .section-destaque-temp-1 {
+        margin-top: 50px;
+
+        .col-xs-12 {
+            padding: 0;
+        }
+
+        .news-destaque {
+            width: 100%;
+            height: 350px;
+            padding: 0;
+            border-bottom: 1px solid #ccc;
+
+            .cnt-shadow {
+                height: 197px;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            .cnt-texto {
+
+                h2 {
+                    color: $azul;
+                }
+                h3 {
+                    color: $preto;
+                    font-size: 18px;
+                }
+                p {
+                    color: $preto;
+                }
+            }
+
+        }
+
+    }
+    // Fim Template 1
+
+    // Template 2
+    .section-destaque-temp-2 {
+
+        hr {
+            clear: both;
+            display: block;
+            height: 1px;
+            background: #ccc;
+            width: 321px;
+            margin-left: -16px;
+        }
+
+        .news-destaque {
+            padding: 0 0 0 0;
+        }
+
+        .cnt-imagem {
+            img {
+                width: 96px;
+                height: 96px;
+            }
+        }
+
+        .cnt-texto {
+            width: 180px;
+            padding-top: 0;
+
+            h3 {
+                font-size: 16px;
+            }
+
+            p {
+                font-size: 12px;
+                line-height: 18px; 
+            }
+
+            .cnt-share {
+                display: block;
+                position: absolute;
+                left: -25px;
+                bottom: 80px;
+              }
+
+        }
+
+    }
+    // Fim Template 2
+
+    // Template 3
+    .section-destaque-temp-3 {
+        margin-top: 10px;
+
+        hr {
+            clear: both;
+            display: block;
+            height: 1px;
+            background: #ccc;
+            width: 321px;
+            margin-left: -16px;
+
+        }
+
+        .col-xs-12 {
+            padding-bottom: 0;
+        }
+
+        .cnt-news {
+            overflow: hidden;
+            height: 130px;
+
+            .cnt-imagem {
+                float: left;
+
+                img {
+                    width: 145px;
+                    height: 79px;
+                }
+
+            }
+
+            .cnt-texto {
+                float: left;
+                width: 130px; 
+                margin-left: 12px;
+                position: relative;
+
+                h3 {
+                    font-size: 16px;
+                }
+
+                p {
+                    display: block;
+                    position: absolute;
+                    font-size: 12px;
+                    line-height: 18px; 
+                    width: 200px;
+                    left: -155px;
+                    top: 90px;
+                }
+
+            }
+
+            .cnt-share {
+                left: 250px;
+              }
+
+        }
+
+    }
+    // Fim Template 3
+
+    // Advertising
+    .section-advertising {
+        @include section-default(100px);
+        margin-top: -20px;
+        border-top: none;
+        padding: 0;
+
+        .col-xs-12 {
+            padding-left: 0;
+        }
+
+        .show-desktop {
+            display: none;
+          }
+        
+          .show-mobile {
+            display: block;
+          }
+
+    }
+    // Final Advertising
+
+    // Segmentos
+    .section-segmentos {
+        margin-top: 10px;
+
+        hr {
+            clear: both;
+            display: block;
+            height: 1px;
+            background: #ccc;
+            width: 321px;
+            margin-left: -16px;
+
+        }
+
+        .col-xs-12 {
+            padding-bottom: 0;
+        }
+
+        .cnt-news {
+            overflow: hidden;
+            height: 130px;
+
+            .cnt-imagem {
+                float: left;
+
+                img {
+                    width: 145px;
+                    height: 79px;
+                }
+
+            }
+
+            .cnt-texto {
+                float: left;
+                width: 130px; 
+                margin-left: 12px;
+                position: relative;
+
+                h3 {
+                    font-size: 16px;
+                }
+
+                p {
+                    display: block;
+                    position: absolute;
+                    font-size: 12px;
+                    line-height: 18px; 
+                    width: 200px;
+                    left: -155px;
+                    top: 90px;
+                }
+
+            }
+
+            .cnt-share {
+                left: 250px;
+              }
+
+        }
+
+        .cnt-lnk-mais {
+            .lnk-mais {
+                padding-right: 15px;
+            }
+        }
+
+    }
+    // Fim Segmentos
+
+    // Footer
+    footer {
+        @include section-default(168px);
+        text-align: center;
+
+        img {
+            margin-left: auto;
+            margin-right: auto;
+          }
+
+        .copyright {
+            background: $azul;
+            @include font-assunto($branco);
+            font-size: 10px;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+    }
+    // Fim Footer
+
+    // Submenu
+    .submenu {
+        top: 50px;
+    }
+    // Fim Submenu
+
+}
